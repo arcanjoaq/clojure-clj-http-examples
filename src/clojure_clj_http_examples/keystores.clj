@@ -7,8 +7,6 @@
    [java.security.cert CertificateFactory]
    [javax.security.cert X509Certificate]))
 
-;; TODO add to commons
-
 (s/defn ->keystore :- KeyStore
   [pem-or-der-path :- s/Str]
   (let [cf (CertificateFactory/getInstance "X.509")
